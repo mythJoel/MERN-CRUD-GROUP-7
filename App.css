@@ -1,0 +1,291 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, rgba(255, 105, 180, 0.8), rgba(0, 0, 128, 0.8)); 
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  padding: 40px;
+  max-width: 85%;
+  margin: 60px auto;
+  text-align: center;
+  background: linear-gradient(135deg, #1d976c, #2b88d8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  color: rgb(7, 7, 7);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Buttons */
+.btn {
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add {
+  background: #1d976c;
+  color: white;
+}
+
+.btn-add:hover {
+  background: #157a57;
+}
+
+/* Form Container */
+.addContainer {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.addContainer form {
+  width: 420px;
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.addContainer form:hover {
+  transform: scale(1.03);
+}
+
+.addContainer form label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+.addContainer form input {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.addContainer form input:focus {
+  border-color: #1d976c;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(29, 151, 108, 0.5);
+}
+
+.addContainer form button {
+  background-color: #2b88d8;
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addContainer form button:hover {
+  background-color: #1c66a1;
+  transform: scale(1.05);
+}
+
+.addContainer form .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 18px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #000;
+  cursor: pointer;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.addContainer form .close-btn:hover {
+  background: #e4e4e4;
+  transform: scale(1.1);
+}
+
+/* Table */
+.tableContainer {
+  margin-top: 40px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.tableContainer:hover {
+  transform: scale(1.02);
+}
+
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer table thead tr {
+  background-color: #1d976c;
+  color: white;
+  font-size: 16px;
+}
+
+.tableContainer table thead tr th,
+.tableContainer table tbody tr td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.tableContainer table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tableContainer table tbody tr:hover {
+  background-color: #e0f2f1;
+  transition: background 0.3s ease, transform 0.2s ease;
+  transform: scale(1.02);
+}
+
+/* Buttons for Edit & Delete */
+.btn-edit,
+.btn-delete {
+  font-size: 14px;
+  padding: 8px 16px;
+  margin: 0px 5px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-edit {
+  background-color: #facc15;
+  color: black;
+}
+
+.btn-edit:hover {
+  background-color: #eab308;
+  transform: scale(1.05);
+}
+
+.btn-delete {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Cursor Glow Animation */
+body {
+  background: linear-gradient(135deg, rgba(255, 105, 180, 0.8), rgba(138, 43, 226, 0.8), rgba(0, 0, 128, 0.8));
+  color: #333;
+  line-height: 1.6;
+  cursor: none; /* Hides default cursor */
+}
+
+.cursor {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 105, 180, 0.7);
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.1s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+/* Cursor follows the mouse */
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(138, 43, 226, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.15s ease-out;
+  mix-blend-mode: difference;
+}
+
+@keyframes rainbowCursor {
+  0% { border-color: #ff69b4; }
+  25% { border-color: #8a2be2; }
+  50% { border-color: #000080; }
+  75% { border-color: #ff1493; }
+  100% { border-color: #ff69b4; }
+}
+
+.cursor {
+  width: 12px;
+  height: 12px;
+  border: 2px solid;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.1s ease-in-out;
+  animation: rainbowCursor 1s infinite linear;
+}
+
